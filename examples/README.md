@@ -1,3 +1,0 @@
-# This is examples!
-
-Hello.
