@@ -1,8 +1,13 @@
+# Configuración de Gitpod
+
+# Carga un espacio de trabajo diferente dependiendo de la carpeta
 tasks:
+
   - name: "Change workspaceRoot dynamically"
     before: |
       (
         input="$GITPOD_WORKSPACE_CONTEXT_URL";
+        echo "Cargando workspace en $input"
         if [[ "$input" =~ /(tree|blob)/(.*) ]]; then {
             slug="${BASH_REMATCH[2]}";
             _branch="${slug%%/*}";
